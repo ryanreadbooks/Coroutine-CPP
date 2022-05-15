@@ -20,28 +20,3 @@ cd build
 cmake ..
 make
 ```
-
-
-
-### 代码结构
-
-├── src
-│   ├── coexecutor.cpp
-│   ├── coexecutor.h
-│   ├── containers.hpp
-│   ├── coroutine.cpp
-│   ├── coroutine.h
-│   ├── coscheduler.cpp
-│   ├── coscheduler.h
-│   ├── mutexes.cpp
-│   ├── mutexes.h
-│   ├── nocopyable.h
-│   ├── singleton.hpp
-│   ├── thread.cpp
-│   ├── thread.h
-│   ├── threadpool.cpp
-│   ├── threadpool.h
-│   ├── utils.cpp
-│   └── utils.h
-└── tests
-
