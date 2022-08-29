@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(src)
+project(coroutine-cpp)
 
 add_definitions(-DDEV_DEBUGGING)
 
@@ -35,19 +35,19 @@ endfunction(ahri_add_executable)
 
 include_directories(.)
 # 可以将其打包成动态库
-add_library(src SHARED ${LIB_SRC})
+add_library(cocpp SHARED ${LIB_SRC})
 set(LIBS
-    src
+    cocpp
     rt
     pthread)
 
 # 添加测试可执行文件
-ahri_add_executable(test_utils tests/test_utils.cpp src "${LIBS}")
-ahri_add_executable(test_coroutine tests/test_coroutine.cpp src "${LIBS}")
-ahri_add_executable(test_coexecutor tests/test_coexecutor.cpp src "${LIBS}")
-ahri_add_executable(test_containers tests/test_containers.cpp src "${LIBS}")
-ahri_add_executable(test_cosched tests/test_cosched.cpp src "${LIBS}")
-ahri_add_executable(test_threadpool tests/test_threadpool.cpp src "${LIBS}")
+ahri_add_executable(test_utils tests/test_utils.cpp "cocpp" "${LIBS}")
+ahri_add_executable(test_coroutine tests/test_coroutine.cpp "cocpp" "${LIBS}")
+ahri_add_executable(test_coexecutor tests/test_coexecutor.cpp "cocpp" "${LIBS}")
+ahri_add_executable(test_containers tests/test_containers.cpp "cocpp" "${LIBS}")
+ahri_add_executable(test_cosched tests/test_cosched.cpp "cocpp" "${LIBS}")
+ahri_add_executable(test_threadpool tests/test_threadpool.cpp "cocpp" "${LIBS}")
 
 
 # 设置可执行文件的输出路径
