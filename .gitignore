@@ -5,3 +5,4 @@ lib
 .vscode
 .idea
 cmake-build-debug
+.VSCodeCounter

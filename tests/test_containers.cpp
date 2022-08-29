@@ -1,5 +1,5 @@
-#include "ahri/containers.hpp"
 #include <iostream>
+#include "containers.hpp"
 using namespace ahri;
 
 int main() {
@@ -36,7 +36,6 @@ int main() {
   d.PushBack(223);
   d.PushBack(123);
 
-
   for (size_t i = 0; i < d.Size(); ++i) {
     std::cout << d[i] << " ";
   }
@@ -52,8 +51,7 @@ int main() {
   d.PopFrontAndReplace(3, q);
   std::cout << "pop 1\n";
 
-  for (auto &num : q)
-  {
+  for (auto &num : q) {
     std::cout << num << " ";
   }
   std::cout << std::endl;
@@ -61,8 +59,7 @@ int main() {
   std::cout << "pop back and Get\n";
   ThreadSafeDeque<int> w;
   d.PopBackAndReplace(3, w);
-  for (auto &num : w)
-  {
+  for (auto &num : w) {
     std::cout << num << " ";
   }
   std::cout << std::endl;
@@ -70,7 +67,7 @@ int main() {
 
   std::cout << "-----------------------------\n";
 
-  ThreadSafeDeque<int> ok {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+  ThreadSafeDeque<int> ok{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
   for (auto &num : ok) {
     std::cout << num << " ";
@@ -80,8 +77,7 @@ int main() {
   ThreadSafeDeque<int> ok1;
   ok.PopBackAndAppend(2, ok1);
   ok.PopFrontAndAppend(3, ok1);
-  for (auto &num : ok1)
-  {
+  for (auto &num : ok1) {
     std::cout << num << " ";
   }
   std::cout << std::endl;

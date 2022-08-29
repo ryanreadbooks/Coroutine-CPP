@@ -23,6 +23,7 @@ set(LIB_SRC
     src/coscheduler.cpp
     src/threadpool.cpp)
 
+include_directories(${PROJECT_SOURCE_DIR}/src)
 
 # 添加可执行文件函数
 function(ahri_add_executable targetname srcname depends libs)

@@ -1,4 +1,4 @@
-#include "ahri/coscheduler.h"
+#include "coscheduler.h"
 
 #include <thread>
 #include <chrono>

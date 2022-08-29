@@ -1,8 +1,6 @@
-#include "ahri/utils.h"
 #include <assert.h>
-void test_backtrace() {
-  printf("%s\n", ahri::GetBackTraceStr().c_str());
-}
+#include "utils.h"
+void test_backtrace() { printf("%s\n", ahri::GetBackTraceStr().c_str()); }
 
 void test_assert() {
   // AHRI_ASSERT(0 == 1);
@@ -10,7 +8,6 @@ void test_assert() {
 }
 
 int main(int argc, char** argv) {
-
   test_backtrace();
   test_assert();
   return 0;

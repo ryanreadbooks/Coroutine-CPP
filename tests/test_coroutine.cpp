@@ -1,6 +1,6 @@
-#include "ahri/coroutine.h"
-#include "ahri/thread.h"
-#include "ahri/utils.h"
+#include "coroutine.h"
+#include "thread.h"
+#include "utils.h"
 
 
 void co_fun1() {
